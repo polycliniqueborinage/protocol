@@ -1,0 +1,12 @@
+2013-09-12 04:14:21,357 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-09-12 04:14:21,358 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-09-12 04:14:21,360 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1ed2ccd
+2013-09-12 04:14:21,360 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1ed2ccd
+2013-09-12 04:24:19,700 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-09-12 04:24:19,701 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-09-12 04:24:19,702 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1c2f20c
+2013-09-12 04:24:19,702 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1c2f20c
+2013-09-12 04:32:34,215 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-09-12 04:32:34,215 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-09-12 04:32:34,217 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@57a184
+2013-09-12 04:32:34,217 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@57a184

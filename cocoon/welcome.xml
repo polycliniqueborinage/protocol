@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<welcome>
+ <message>
+   Congratulations! If you are reading this page, it means that
+   your Apache Cocoon installation was successful.
+ </message>
+ <link href="status">
+   Server status
+ </link>
+</welcome>

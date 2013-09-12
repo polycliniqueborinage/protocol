@@ -1,0 +1,178 @@
+2013-06-14 03:09:01,553 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:09:01,553 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:09:01,562 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:09:01,564 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:09:11,897 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:09:11,897 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:09:11,899 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@887590
+2013-06-14 03:09:11,899 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@887590
+2013-06-14 03:09:11,899 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@de6c4b
+2013-06-14 03:09:11,899 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@de6c4b
+2013-06-14 03:23:19,098 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:23:19,098 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:23:19,100 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1d32268
+2013-06-14 03:23:19,100 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1d32268
+2013-06-14 03:23:19,100 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@780c04
+2013-06-14 03:23:19,100 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@780c04
+2013-06-14 03:27:56,948 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:27:56,948 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:27:56,957 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:27:56,959 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:28:22,411 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:28:22,411 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:28:22,413 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@109255d
+2013-06-14 03:28:22,413 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@109255d
+2013-06-14 03:33:42,565 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:33:42,565 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:33:42,574 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:33:42,577 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:34:02,795 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:34:02,796 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:34:02,797 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@5e1e88
+2013-06-14 03:34:02,797 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@5e1e88
+2013-06-14 03:36:03,729 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:36:03,729 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:36:03,736 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:36:19,458 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:36:19,458 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:36:19,459 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@c65797
+2013-06-14 03:36:19,459 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@c65797
+2013-06-14 03:45:55,138 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:45:55,138 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:45:55,144 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:47:15,390 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:47:15,390 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:47:15,396 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:48:25,268 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:48:25,268 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:48:25,276 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:48:25,278 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:48:35,178 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:48:35,178 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:48:35,179 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@164789d
+2013-06-14 03:48:35,179 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@164789d
+2013-06-14 03:54:05,313 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:54:05,313 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:54:05,321 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:54:05,323 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 03:54:23,690 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:54:23,690 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:54:23,691 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@131c3c
+2013-06-14 03:54:23,691 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@131c3c
+2013-06-14 03:56:15,967 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:56:15,967 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:56:15,969 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@10e1702
+2013-06-14 03:56:15,969 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@10e1702
+2013-06-14 03:56:37,532 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:56:37,533 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 03:56:37,534 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@101230
+2013-06-14 03:56:37,534 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@101230
+2013-06-14 04:01:07,468 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:01:07,468 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:01:07,470 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@bddfd7
+2013-06-14 04:01:07,470 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@bddfd7
+2013-06-14 04:03:21,312 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:03:21,312 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:03:21,321 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:03:21,324 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:04:08,195 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:04:08,196 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:04:08,211 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:04:08,214 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:06:23,378 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:06:23,378 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:06:23,386 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:06:23,388 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:06:58,079 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:06:58,079 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:06:58,087 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:06:58,090 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 04:09:14,388 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:09:14,388 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:09:14,390 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@15465a1
+2013-06-14 04:09:14,390 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@15465a1
+2013-06-14 04:18:02,908 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:18:02,908 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:18:02,910 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1482490
+2013-06-14 04:18:02,910 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1482490
+2013-06-14 04:24:57,499 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:24:57,499 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:24:57,501 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1d09f3
+2013-06-14 04:24:57,501 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1d09f3
+2013-06-14 04:42:05,217 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:42:05,217 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 04:42:05,222 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 05:15:39,439 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:15:39,439 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:15:39,446 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@12291d6
+2013-06-14 05:15:39,446 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@12291d6
+2013-06-14 05:33:19,550 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:33:19,550 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:33:19,558 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 05:33:19,560 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 05:33:30,293 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:33:30,293 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:33:30,294 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@2e2c1
+2013-06-14 05:33:30,294 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@2e2c1
+2013-06-14 05:46:31,533 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:46:31,533 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:46:31,535 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@365400
+2013-06-14 05:46:31,535 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@365400
+2013-06-14 05:52:04,011 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:52:04,011 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:52:04,019 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 05:52:04,022 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 05:52:42,514 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:52:42,515 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 05:52:42,516 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@127f4af
+2013-06-14 05:52:42,516 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@127f4af
+2013-06-14 06:31:59,275 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 06:31:59,275 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 06:31:59,276 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1b9487c
+2013-06-14 06:31:59,276 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1b9487c
+2013-06-14 06:31:59,277 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@145d31c
+2013-06-14 06:31:59,277 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@145d31c
+2013-06-14 10:00:35,707 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:00:35,708 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:00:35,715 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 10:03:11,578 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:03:11,578 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:03:21,890 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:03:21,890 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:06:38,981 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:06:38,981 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:06:38,982 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@2889fc
+2013-06-14 10:06:38,982 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@2889fc
+2013-06-14 10:06:50,774 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:06:50,774 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 10:06:50,776 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1eebc93
+2013-06-14 10:06:50,776 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1eebc93
+2013-06-14 11:23:01,615 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:23:01,615 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:23:01,622 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:25:40,424 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:25:40,424 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:25:40,430 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:26:53,483 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:26:53,483 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:26:53,490 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:28:50,370 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:28:50,370 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:28:50,379 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:28:50,381 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:29:03,518 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:29:03,518 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:29:03,519 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1894f8c
+2013-06-14 11:29:03,519 WARN  org.apache.fop.render.rtf.RTFHandler     Ignored deferred event for org.apache.fop.fo.flow.Leader@1894f8c
+2013-06-14 11:33:45,910 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:33:45,910 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:33:45,917 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:33:57,418 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:33:57,418 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:33:57,425 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:34:03,172 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:34:03,172 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:34:03,178 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)
+2013-06-14 11:36:02,457 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:36:02,457 ERROR org.apache.fop.fo.PropertyList           Ignoring property: font="italic 13pt sans-serif" (No conversion defined italic; property:'font')
+2013-06-14 11:36:02,462 WARN  g.apache.fop.layoutmgr.BreakingAlgorithm Line 1 of a paragraph overflows the available area. (fo:block, no context info available)

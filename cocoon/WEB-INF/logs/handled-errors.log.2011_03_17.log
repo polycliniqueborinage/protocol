@@ -1,0 +1,4 @@
+2011-03-17 13:52:16.886 ERROR sitemap.handled-errors                   (192.168.100.123:55555/favicon.ico) main-9/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+2011-03-17 13:52:17.265 ERROR sitemap.handled-errors                   (192.168.100.123:55555/favicon.ico) main-9/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+2011-03-17 16:21:55.601 ERROR sitemap.handled-errors                   (192.168.100.123:55555/favicon.ico) main-6/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+2011-03-17 16:21:56.653 ERROR sitemap.handled-errors                   (192.168.100.123:55555/favicon.ico) main-6/ErrorHandlerHelper: No pipeline matched request: favicon.ico

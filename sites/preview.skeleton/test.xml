@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmehrmessage>
+	<header>
+		<standard>
+			<cd S="CD-STANDARD" SV="1.0">20021205</cd>
+		</standard>
+		<id S="ID-KMEHR" SV="1.0">23232444444.5</id>
+		<!-- Creation Time -->
+		<date>2009-07-31</date>
+		<time>08:55</time>
+		<!-- who send the report -->
+		<sender>
+			<hcparty>
+				<id S="ID-HCPARTY" SV="1.0">98765432111</id>
+				<cd S="CD-HCPARTY" SV="1.0">deptanesthesiology</cd>
+				<firstname>Maboul</firstname>
+				<familyname>Complet</familyname>
+			</hcparty>
+			<hcparty>
+				<cd S="CD-HCPARTY" SV="1.0">orghospital</cd>
+				<name>Nouvelle Polyclinique du Borinage</name>
+			</hcparty>
+		</sender>
+		<!-- who received the report -->
+		<recipient>
+			<hcparty>
+				<id S="ID-HCPARTY" SV="1.0">11111111111</id>
+				<cd S="CD-HCPARTY" SV="1.0">deptgenetics</cd>
+				<firstname>Marc</firstname>
+				<familyname>Dupont</familyname>
+				<address>
+				<cd S="CD-ADDRESS" SV="1.0">work</cd>
+					<country>
+						<cd S="CD-COUNTRY" SV="1.0">Belgique</cd>
+					</country>
+					<zip>6533</zip>
+					<city>Biercée</city>
+					<street>Rue du Grand Passage 70</street>
+				</address>
+			</hcparty>
+			<hcparty>
+				<id S="ID-HCPARTY" SV="1.0">22222222222</id>
+				<cd S="CD-HCPARTY" SV="1.0">deptgenetics</cd>
+				<firstname>Antoine</firstname>
+				<familyname>Démerez</familyname>
+				<address>
+				<cd S="CD-ADDRESS" SV="1.0">work</cd>
+					<country>
+						<cd S="CD-COUNTRY" SV="1.0">Belgique</cd>
+					</country>
+					<zip>7000</zip>
+					<city>Mons</city>
+					<street>Rue de la tour 132b</street>
+				</address>
+			</hcparty>
+		</recipient>
+	</header>
+	<folder>
+		<id S="ID-KMEHR" SV="1.0">1</id>
+		<patient>
+			<id S="ID-PATIENT" SV="1.0">1234567890</id>
+			<id S="LOCAL" SL="ISPPC-ID-PATIENT" SV="3.4">1234</id>
+			<firstname>Elise</firstname>
+			<familyname>Trucmuch</familyname>
+			<birthdate>
+				<date>1962-04-31</date>
+			</birthdate>
+			<sex>
+				<cd S="CD-SEX" SV="1.0">female</cd>
+			</sex>
+			<address>
+				<cd S="CD-ADDRESS" SV="1.0">home</cd>
+				<country>
+					<cd S="CD-COUNTRY" SV="1.0">be</cd>
+				</country>
+				<zip>7677</zip>
+				<city>Las Vegas</city>
+				<street>rue de la neuville 250</street>
+			</address>
+		</patient>
+		<transaction>
+			<id S="ID-KMEHR" SV="1.0">1</id>
+			<cd S="CD-TRANSACTION" SV="1.0">contact</cd>
+			<!-- Contact Time -->
+			<date>2009-07-31</date>
+			<time>12:00</time>
+			<author>
+				<hcparty>
+					<id S="ID-HCPARTY" SV="1.0">98765432111</id>
+					<cd S="CD-HCPARTY" SV="1.0">deptanesthesiology</cd>
+					<firstname>Maboul</firstname>
+					<familyname>Complet</familyname>
+				</hcparty>
+			</author>
+			<!-- Complete information -->
+			<iscomplete>true</iscomplete>
+			<!-- Medical validate -->
+			<isvalidated>true</isvalidated>
+			<text L="fr">Cher Confrère,<br/><br/><br/>Je vous remercie de m'avoir permis de voir en consultation Madame Trucmuch Elise, née le 31/04/1962.<br/><br/>Depuis plusieurs mois, votre patiente se plaint de douleurs lombaires invalidantes associées à des douleurs localisées à la hanche droite. Ces douleurs apparaissent essentiellement en position debout prolongée et à la marche mais pas en décubitus ni en position assise.<br/><br/>L'examen neurologique est sans particularité. J'ai demandé la réalisation de radiographies du rachis lombaire, du bassin et de la hanche droite ainsi qu'une échographie de la hanche, un scanner lombaire ainsi qu'une scintigraphie osseuse.<br/><br/>Je reverrai Madame Trucmuch Elise à la consultation avec les résultats de ces examens.<br/><br/>Selon les résultats qui en découleront, je procéderais sans doute à une ablation des troisièmes et quatrièmes cervicales.<br/><br/>  Comme vous le savez sans doute, l'ablation au laser, un processus dans lequel les liaisons covalentes d'un matériel sont dissoutes au laser afin d'ôter du matériel de la surface d'un objet par vaporisation ou d'autres processus érosifs. Ce n'est donc pas sans rique et cela ne sera donc qu'une solution temporataire.  <br/><br/>Je vous prie d'agréer, Cher Confrère, l'expression de mes sentiments respectueux et dévoués.</text>
+		</transaction>
+	</folder>
+</kmehrmessage>

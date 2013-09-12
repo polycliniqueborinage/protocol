@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2001-2007 Hippo (www.hippo.nl)
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. 
+-->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+  <map:components>
+    <map:generators default="file">
+      <map:generator name="skeleton" src="nl.hippo.cocoon.generation.SiteSkeletonGenerator"
+        label="content" logger="sitemap.generator.file" pool-min="4" pool-max="32" pool-grow="4"/>
+      <map:generator name="createconfiguration"
+        src="nl.hippo.cocoon.generation.SiteConfigurationGenerator" label="content"
+        logger="sitemap.generator.file" pool-min="4" pool-max="32" pool-grow="4"/>
+      <map:generator label="content" logger="sitemap.generator.file" name="homepages" pool-grow="4"
+        pool-max="32" pool-min="4" src="nl.hippo.cocoon.generation.HomePageUrlsGenerator"/>
+
+    </map:generators>
+    <map:serializers>
+      <map:serializer name="xhtml" logger="sitemap.serializer.xml"
+        mime-type="text/html; charset=UTF-8" src="org.apache.cocoon.serialization.XMLSerializer">
+        <omit-xml-declaration>yes</omit-xml-declaration>
+        <doctype-public>-//W3C//DTD XHTML 1.0 Strict//EN</doctype-public>
+        <doctype-system>DTD/xhtml1-strict.dtd</doctype-system>
+        <encoding>UTF-8</encoding>
+      </map:serializer>
+    </map:serializers>
+    <map:transformers>
+      <map:transformer name="webdav2paging"
+        src="nl.hippo.cocoon.transformation.WebDav2PagingTransformer" logger="sitemap.transformers"
+        pool-min="4" pool-max="32" pool-grow="4"> </map:transformer>
+
+    </map:transformers>
+  </map:components>
+  
+  <map:flow language="javascript">
+    <map:script src="flow/import.js"/>
+  </map:flow>
+  
+  <map:pipelines>
+
+    <map:pipeline id="system-public">
+
+      <map:match pattern="resources/**">
+        <map:read src="resources/{1}"/>
+      </map:match>
+
+      <map:match pattern="step1b">
+        <map:call function="importContent">
+          <map:parameter name="repository" value="{repository:files}" />
+          <map:parameter name="rootPath" value="{repository:rootPath}" />
+          <map:parameter name="username" value="{request-param:username}" />
+          <map:parameter name="password" value="{request-param:password}" />
+          <map:parameter name="host" value="{repository:host}" />
+          <map:parameter name="realPath" value="{realpath:}" />
+          <map:parameter name="doImportContent" value="{request-param:importContent}" />
+        </map:call>
+      </map:match>
+      
+      <map:match pattern="step2">
+        <map:generate type="jx" src="dasl/sitemenu-dasl.xml">
+          <map:parameter name="target" value="{repository:files}"/>
+        </map:generate>
+        <map:transform type="webdav"/>
+        <map:transform type="webdav2paging"/>
+        <map:transform src="wizard/step2.xsl">
+          <map:parameter name="substringafter" value="{repository:filesPath}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="step3">
+        <map:generate type="createconfiguration"/>
+        <map:transform src="wizard/step3.xsl"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="step5">
+        <map:aggregate element="create">
+          <map:part src="cocoon:/createskeleton"/>
+          <map:part src="cocoon:/homepages"/>
+        </map:aggregate>
+        <map:transform src="wizard/step5.xsl"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="step*">
+        <map:generate src="wizard/step{1}.xml"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="gfx/*.*">
+        <map:read src="wizard/gfx/{1}.{2}"/>
+      </map:match>
+
+      <map:match pattern="css/*.css">
+        <map:read src="wizard/css/{1}.css"/>
+      </map:match>
+
+      <map:match pattern="start">
+        <map:generate src="wizard/start.xml"/>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="selectsitemenus">
+        <map:generate type="jx" src="dasl/sitemenu-dasl.xml">
+          <map:parameter name="target" value="{repository:files}"/>
+        </map:generate>
+        <map:transform type="webdav"/>
+        <map:transform type="webdav2paging"/>
+        <map:transform src="selectmenus.xsl">
+          <map:parameter name="substringafter" value="{repository:filesPath}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="createskeleton">
+        <map:generate type="skeleton">
+          <map:parameter name="typesLocation" value="{request-param:typesLocation}"/>
+        </map:generate>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <map:match pattern="homepages">
+        <map:generate type="homepages"/>
+        <map:serialize type="xml"/>
+      </map:match>
+      
+      <map:match pattern="import">
+        <map:call function="importContent">
+          <map:parameter name="repository" value="{repository:files}" />
+          <map:parameter name="rootPath" value="{repository:rootPath}" />
+          <map:parameter name="username" value="{request-param:username}" />
+          <map:parameter name="password" value="{request-param:password}" />
+          <map:parameter name="host" value="{repository:host}" />
+          <map:parameter name="realPath" value="{realpath:}" />
+        </map:call>
+      </map:match>
+
+    </map:pipeline>
+
+    <map:handle-errors>
+      <map:select type="exception">
+
+        <map:when test="not-found">
+          <map:generate type="notifying"/>
+          <map:transform src="wizard/resourcenotfound.xsl"/>
+          <map:serialize type="xhtml" status-code="404"/>
+        </map:when>
+          
+      </map:select>
+
+    </map:handle-errors>
+  </map:pipelines>
+</map:sitemap>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components proxy-type="none">
+  <webapp activation="inline" id="cocoon">
+    <parameter name="webapp" value="cocoon"/>
+    <parameter name="context-path" value="/"/>
+  </webapp>
+
+  <jetty activation="inline" id="jetty"/>
+</components>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><sites version="1.0">
+
+  <site name="preview.skeleton">
+    <domain>192.168.100.123</domain>
+    <directory>../sites/preview.skeleton/</directory>
+  
+
+  <repository>default</repository>
+
+
+
+  <credentials>siteuser:siteuser</credentials>
+
+</site>
+
+
+
+  <site name="www.skeleton">
+    <domain>protocol.polycliniqueborinage.org</domain>
+    <directory>../sites/preview.skeleton/</directory>
+  
+
+  <repository>skeleton-live</repository>
+
+
+
+  <credentials>siteuser:siteuser</credentials>
+
+</site>
+
+</sites>

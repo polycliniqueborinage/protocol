@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+   Copyright 2001-2006 Hippo (www.hippo.nl)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License. 
+-->
+<catalogue xml:lang="en">
+
+  <message key="html.head.title">Service Protocol</message>
+  <message key="footer.copyright">Copyright (C) 2009 - Nouvelle polyclinique du borinage.</message>
+  <message key="meta.keywords">protocol</message>
+  <message key="meta.description">Service Protocol</message>
+  <message key="img.alt.missing">Image</message>
+
+  <message key="error.title.sourcenotfound">Page not found</message>
+  <message key="error.message.sourcenotfound">The page you requested could not be found.</message>
+  <message key="error.title.other">Server error</message>
+  <message key="error.message.other">Your request could not be processed.</message>
+
+</catalogue>

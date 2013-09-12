@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!--
+   Copyright 2001-2006 Hippo (www.hippo.nl)
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License. 
+-->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+  <map:components>
+    
+    <map:serializers default="xml">
+      <serializer name="xml" mime-type="text/xml" src="org.apache.cocoon.serialization.XMLSerializer">
+  		<encoding>UTF-8</encoding>
+	  </serializer>
+      <map:serializer name="fo2pdf" mime-type="application/pdf" src="org.apache.cocoon.blocks.fop.FOPNGSerializer">
+        <set-content-length>false</set-content-length>
+      </map:serializer>
+      <map:serializer name="fo2rtf" mime-type="application/rtf" src="org.apache.cocoon.blocks.fop.FOPNGSerializer">  
+        <set-content-length>false</set-content-length>  
+      </map:serializer>
+      <map:serializer name="text" src="org.apache.cocoon.serialization.TextSerializer" mime-type="text/plain" logger="sitemap.serializer.text" />
+	  <serializer name="html" mime-type="text/html; charset=UTF-8" src="org.apache.cocoon.serialization.HTMLSerializer">
+  		<encoding>UTF-8</encoding>
+  		<!-- the following common doctype is only included for completeness, it has no impact on encoding -->
+  		<doctype-public>-//W3C//DTD HTML 4.01 Transitional//EN</doctype-public>
+  		<doctype-system>http://www.w3.org/TR/html4/loose.dtd</doctype-system>
+	  </serializer>
+    </map:serializers>
+
+    <map:generators default="file">
+      <map:generator name="exception" src="org.apache.cocoon.generation.ExceptionGenerator"/>
+      <map:generator name="stream" src="org.apache.cocoon.generation.StreamGenerator"/>
+    </map:generators>
+    
+  </map:components>
+
+  <!-- =========================== Views ===================================== -->
+  <map:views>
+    <map:view name="content" from-label="content">
+      <map:serialize type="xml"/>
+    </map:view>
+    <map:view name="source" from-label="source">
+      <map:serialize type="xml"/>
+    </map:view>
+  </map:views>
+
+  <!-- =========================== Pipelines ================================= -->
+  <map:pipelines>
+
+    <!-- *** public noncaching pipeline for images, css and javascript *** -->
+    <map:pipeline type="noncaching" internal-only="false">
+
+      <map:match pattern="images/**.*">
+        <map:read src="resources/images/{1}.{2}" name="expiresDay"/>
+      </map:match>
+
+      <!-- load css file by filename -->
+      <map:match pattern="css/**.css">
+        <map:read src="resources/css/{1}.css" mime-type="text/css" name="expiresDay"/>
+      </map:match>
+
+      <map:match pattern="js/**.js">
+        <map:read src="resources/js/{1}.js" name="expiresDay"/>
+      </map:match>
+
+      <map:match pattern="binaries/**.*">
+        <map:read src="repository-binary:default://binaries/{1}.{2}" name="expiresDay"/>
+      </map:match>
+
+    </map:pipeline>
+
+    <!-- *** public event caching pipelines *** -->
+    <map:pipeline type="noncaching" internal-only="false">
+      
+	  <map:match pattern="">
+	    <map:generate src="welcome.xml"/>
+          <map:transform src="transformers/templates/errorpage.xsl"/>
+          <map:transform type="i18n">
+            <map:parameter name="locale" value="en"/>
+          </map:transform>
+          <map:transform src="site://transformers/util/stripnamespaces.xsl"/>
+        <map:serialize type="html"/>
+      </map:match>
+
+	  <map:match pattern="test.xml">
+	    <map:generate src="test.xml"/>
+        <map:transform src="transformers/util/stripnamespaces.xsl" />
+        <map:serialize type="xml"/>
+      </map:match>
+
+	  <map:match pattern="test.html">
+	    <map:generate src="test.xml"/>
+        <map:transform src="transformers/util/stripnamespaces.xsl" />
+        <map:transform src="transformers/doctohtml.xsl" />
+        <map:serialize type="html"/>
+      </map:match>
+
+	  <map:match pattern="test.txt">
+	    <map:generate src="test.xml"/>
+        <map:transform src="transformers/util/stripnamespaces.xsl" />
+        <map:transform src="transformers/doctohtml.xsl" />
+        <map:serialize type="text"/>
+      </map:match>
+
+	  <map:match pattern="test.pdf">
+	    <map:generate src="test.xml"/>
+        <map:transform src="transformers/util/stripnamespaces.xsl" />
+        <map:transform src="transformers/doctopdf.xsl" />
+        <map:serialize type="fo2pdf"/>
+      </map:match>
+
+	  <map:match pattern="test.rtf">
+	    <map:generate src="test.xml"/>
+        <map:transform src="transformers/util/stripnamespaces.xsl" />
+        <map:transform src="transformers/doctortf.xsl" />
+        <map:serialize type="fo2rtf"/>
+      </map:match>
+
+	  <map:match pattern="get_xml_protocol">
+	  	<map:generate type="stream">
+			<map:parameter name="form-name" value="protocol"/>
+			<map:parameter name="defaultContentType" value="multipart/form-data"/>
+		</map:generate>
+        <map:serialize type="xml"/>
+      </map:match>
+
+	  <map:match pattern="protocol.xml">
+        <map:generate src="cocoon:/get_xml_protocol"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
+	  <map:match pattern="protocol.html">
+        <map:generate src="cocoon:/get_xml_protocol"/>
+        <map:transform src="transformers/doctohtml.xsl" />
+        <map:serialize type="html"/>
+      </map:match>
+
+	  <map:match pattern="protocol.txt">
+        <map:generate src="cocoon:/get_xml_protocol"/>
+        <map:transform src="transformers/doctotxt.xsl" />
+        <map:serialize type="text"/>
+      </map:match>
+
+	  <map:match pattern="protocol.pdf">
+        <map:generate src="cocoon:/get_xml_protocol"/>
+        <map:transform src="transformers/doctopdf.xsl" />
+        <map:serialize type="fo2pdf"/>
+      </map:match>
+
+	  <map:match pattern="protocol.rtf">
+        <map:generate src="cocoon:/get_xml_protocol"/>
+        <map:transform src="transformers/doctortf.xsl" />
+        <map:serialize type="fo2rtf"/>
+      </map:match>
+
+    </map:pipeline>
+
+    <map:handle-errors when="always">
+      <map:select type="exception">
+        <map:when test="not-found">
+          <map:generate type="exception"/>
+          <map:transform src="transformers/templates/errorpage.xsl"/>
+          <map:transform type="i18n">
+            <map:parameter name="locale" value="en"/>
+          </map:transform>
+          <map:transform src="site://transformers/util/stripnamespaces.xsl"/>
+          <map:serialize type="xhtml" status-code="404"/>
+        </map:when>
+        <map:otherwise>
+          <map:generate type="exception"/>
+          <map:transform src="transformers/templates/errorpage.xsl"/>
+          <map:transform type="i18n">
+            <map:parameter name="locale" value="en"/>
+          </map:transform>
+          <map:transform src="site://transformers/util/stripnamespaces.xsl"/>
+          <map:serialize type="xhtml" status-code="500"/>
+        </map:otherwise>
+      </map:select>
+    </map:handle-errors>
+
+  </map:pipelines>
+
+</map:sitemap>

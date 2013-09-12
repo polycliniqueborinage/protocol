@@ -1,0 +1,88 @@
+<role-list>
+
+   <role name="org.apache.excalibur.store.StoreJanitor" shorthand="store-janitor" 
+      default-class="nl.hippo.cocoon.components.store.impl.HippoStoreJanitor"
+   />
+
+  <role name="nl.hippo.cocoon.site.SiteManager"
+        shorthand="site-manager"
+        default-class="nl.hippo.cocoon.site.SiteManagerImpl"
+  />
+
+  <role name="nl.hippo.cocoon.repository.RepositoryManager"
+        shorthand="repository-manager"
+        default-class="nl.hippo.cocoon.repository.RepositoryManagerImpl"
+  />
+
+  <role name="org.apache.cocoon.components.jms.JMSConnectionManager"
+        shorthand="jms-connection-manager"
+        default-class="nl.hippo.cocoon.components.jms.JMSConnectionManagerImpl"
+  />
+  
+  <!-- the eventaware caches + manager -->
+  <role shorthand="eventcache"
+        name="org.apache.cocoon.caching.Cache/EventAware"
+        default-class="org.apache.cocoon.caching.impl.MultipleEventAwareCacheImpl"
+  />
+  <role shorthand="eventcache-repository-doc"
+        name="org.apache.cocoon.caching.Cache/EventAwareRepositoryDoc"
+        default-class="org.apache.cocoon.caching.impl.MultipleEventAwareCacheImpl"
+  />
+  <role shorthand="eventcache-repository-binary"
+        name="org.apache.cocoon.caching.Cache/EventAwareRepositoryBinary"
+        default-class="org.apache.cocoon.caching.impl.MultipleEventAwareCacheImpl"
+  /> 
+  <role name="org.apache.cocoon.caching.EventAwareManager"
+        shorthand="eventaware-manager"
+        default-class="org.apache.cocoon.caching.impl.EventAwareManagerImpl"/>
+  <!-- ******************* -->
+  
+  <!-- the eventregistries -->
+  <role shorthand="eventregistry"
+        name="org.apache.cocoon.caching.EventRegistry"
+        default-class="org.apache.cocoon.caching.impl.WeakRefEventRegistryImpl"
+  />
+  <role shorthand="eventregistry-repository-doc"
+        name="org.apache.cocoon.caching.EventRegistry/repositoryDoc"
+        default-class="org.apache.cocoon.caching.impl.WeakRefEventRegistryImpl"
+  />
+  <role shorthand="eventregistry-repository-binary"
+        name="org.apache.cocoon.caching.EventRegistry/repositoryBinary"
+        default-class="org.apache.cocoon.caching.impl.WeakRefEventRegistryImpl"
+  />
+  <!-- ******************* -->
+ 
+  <!-- the stores -->
+  <role name="org.apache.excalibur.store.Store"
+        shorthand="store"
+        default-class="nl.hippo.cocoon.components.store.impl.JCSDefaultStore"
+  />
+  
+  <role name="org.apache.excalibur.store.Store/RepositoryBinary"
+        shorthand="store-repository-binary"
+        default-class="nl.hippo.cocoon.components.store.impl.JCSDefaultStore"
+  />
+  
+  <role name="org.apache.excalibur.store.Store/RepositoryDoc"
+        shorthand="store-repository-doc"
+        default-class="nl.hippo.cocoon.components.store.impl.JCSDefaultStore"
+  />
+  <!-- ********** -->
+  
+  
+  <role name="org.apache.avalon.excalibur.monitor.Monitor"
+        shorthand="monitor"
+        default-class="org.apache.avalon.excalibur.monitor.ActiveMonitor"
+  />
+  
+  <!-- transient event store and registry --> 
+  <role name="org.apache.cocoon.caching.EventRegistry/Transient"
+        shorthand="transient-eventregistry"
+        default-class="org.apache.cocoon.caching.impl.TransientEventRegistryImpl"/>
+        
+  <role name="org.apache.excalibur.store.Store/EventAware"
+        shorthand="eventaware-store"
+        default-class="org.apache.cocoon.components.store.impl.EventAwareTransientStore"/>
+  <!-- ********************************** -->      
+
+</role-list>

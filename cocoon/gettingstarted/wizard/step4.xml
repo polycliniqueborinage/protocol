@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2001-2008 Hippo (www.onehippo.com)
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. 
+-->
+<html>
+  <head>
+    <title>New Hippo Cocoon Project</title>
+    <link href="css/wizard.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript">
+      function validate(form) {
+        if (form.typesLocation[1].checked) {
+          if (form.typesLocationOther.value != "") {
+            form.typesLocation[1].value = form.typesLocationOther.value;
+            return true;
+          }
+          else {
+            alert("Please fill in a location");
+            return false;
+          }
+        }
+        else if (form.typesLocation[0].checked) {
+          return true;
+        }
+        else {
+          alert("Please select one of the options");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wizard">
+      <h2 class="wizardname">New Hippo Cocoon Project</h2> 	
+      <div id="wizardborder">
+        <div id="wizardwrapper">
+          
+              <div id="wizardtitle">
+                <h2>Skeleton Generation</h2>
+                <p>
+                  Hippo Cocoon can generate a skeleton site based on your sitemenus and templates.
+                </p>
+              </div>
+              <div id="wizardcontent">
+                <h2>Select templates location</h2>
+                <p>
+                  Please select the location of types.xml, the file in which your templates are defined.
+                </p>
+                <p>
+                  <form action="step5" method="get" id="typesform" onsubmit="selectOther(this);" >
+                    <br/>
+                    <input type="radio" name="typesLocation" id="typesLocation-repo" value="repository://types/types.xml" checked="checked"/>
+                    <label for="typesLocation-repo">repository://types/types.xml (default)</label>
+                    <br/>
+                    <br/>
+                    <input type="radio" name="typesLocation" value="other"/>
+                    <label for="typesLocationOther">other:</label>
+                    <input type="text" name="typesLocationOther" id="typesLocationOther" size="50"/>
+                  </form>                    
+                </p>
+                
+              </div>
+          
+          <div id="wizardcontrols">
+            <a href="step2"><span class="button">Back</span></a>
+            <a href="javascript:if(validate(document.forms.typesform)){document.forms.typesform.submit();}"><span class="button">Next</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

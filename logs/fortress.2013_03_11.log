@@ -1,0 +1,7 @@
+2013-03-11 10:18:45.717 WARN  fortress.system.roles.defaults           Unable to load class org.apache.avalon.excalibur.datasource.JdbcDataSource. Skipping.
+2013-03-11 10:18:45.722 WARN  fortress.system.roles.defaults           Unable to load class org.apache.avalon.excalibur.datasource.J2eeDataSource. Skipping.
+2013-03-11 10:18:45.722 WARN  fortress.system.roles.defaults           Unable to load class org.apache.avalon.excalibur.datasource.InformixDataSource. Skipping.
+2013-03-11 10:18:45.739 WARN  fortress.system.roles.defaults           Unable to load class org.apache.excalibur.xml.xpath.XPathProcessorImpl. Skipping.
+2013-03-11 10:18:45.740 WARN  fortress.system.roles.defaults           Unable to load class org.apache.excalibur.xml.xpath.JaxenProcessorImpl. Skipping.
+2013-03-11 10:18:45.740 WARN  fortress.system.roles.defaults           Unable to load class org.apache.excalibur.xml.impl.JaxpParser. Skipping.
+2013-03-11 10:18:45.740 WARN  fortress.system.roles.defaults           Unable to load class org.apache.excalibur.xml.impl.XercesParser. Skipping.

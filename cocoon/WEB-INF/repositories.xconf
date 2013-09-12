@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><repositories version="1.0">
+
+  <repository name="default">
+    <host>localhost</host>
+    <port>60000</port>
+    <rootpath>/default</rootpath>
+    <filespath>/files/default.preview</filespath>
+    <userspath>/users</userspath>
+    <rolespath>/roles</rolespath>
+    <actionspath>/actions</actionspath>
+  </repository>
+
+
+
+  <repository name="skeleton-live">
+    <host>localhost</host>
+    <port>60000</port>
+    <rootpath>/default</rootpath>
+    <filespath>/files/default.www</filespath>
+    <userspath>/users</userspath>
+    <rolespath>/roles</rolespath>
+    <actionspath>/actions</actionspath>
+  </repository>
+
+</repositories>

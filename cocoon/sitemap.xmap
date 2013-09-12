@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Copyright 2001-2008 Hippo (www.onehippo.com)
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. 
+--><map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+  <map:components>
+    <map:generators default="file">
+      <map:generator label="content" logger="sitemap.generator.file" name="file" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.generation.FileGenerator"/>
+      <map:generator label="content" logger="sitemap.generator.jx" name="jx" pool-grow="4" pool-max="32" pool-min="4" src="nl.hippo.cocoon.generation.JXTemplateGenerator"/>
+      <map:generator label="content" logger="sitemap.generator.status" name="status" pool-grow="4" pool-max="32" pool-min="4" src="nl.hippo.cocoon.generation.StatusGenerator"/>
+      <map:generator name="notifying" src="org.apache.cocoon.sitemap.NotifyingGenerator"/>
+    
+  <map:generator label="content" logger="sitemap.generator.jx" name="hippojx" pool-grow="4" pool-max="32" pool-min="4" src="nl.hippo.cocoon.generation.HippoJXTemplateGenerator"/>
+  <map:generator name="exception" src="org.apache.cocoon.generation.ExceptionGenerator"/>
+</map:generators>
+    <map:transformers default="xslt">
+      <map:transformer logger="sitemap.transformer.xslt" name="xslt" pool-grow="2" pool-max="32" pool-min="4" src="org.apache.cocoon.transformation.TraxTransformer">
+        <use-request-parameters>false</use-request-parameters>
+        <use-session-parameters>false</use-session-parameters>
+        <use-cookie-parameters>false</use-cookie-parameters>
+        <xslt-processor-role>xalan</xslt-processor-role>
+        <check-includes>true</check-includes>
+      </map:transformer>
+      <map:transformer logger="sitemap.transformer.xsltc" name="xsltc" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.transformation.TraxTransformer">
+        <use-request-parameters>false</use-request-parameters>
+        <use-session-parameters>false</use-session-parameters>
+        <use-cookie-parameters>false</use-cookie-parameters>
+        <xslt-processor-role>xsltc</xslt-processor-role>
+        <check-includes>true</check-includes>
+      </map:transformer>
+      <map:transformer logger="sitemap.transformers.webdav" name="webdav" pool-grow="4" pool-max="32" pool-min="4" src="nl.hippo.cocoon.transformation.WebDAVTransformer">
+        <parameter name="httpstate" value="site:httpstate"/>
+      </map:transformer>
+    
+  <map:transformer logger="sitemap.transformer.linkrewriter" name="linkrewriter" pool-grow="2" pool-max="32" pool-min="2" src="nl.hippo.cocoon.transformation.NopValidityLinkRewriterTransformer">
+    <schemes>lm</schemes>
+    <link-attrs>href src</link-attrs>
+  </map:transformer>
+  <map:transformer name="i18n" src="org.apache.cocoon.transformation.I18nTransformer">
+    <catalogues default="default">
+      <catalogue id="default" location="site://translations" name="messages"/>
+    </catalogues>
+    <cache-at-startup>false</cache-at-startup>
+  </map:transformer>
+</map:transformers>
+    <map:serializers default="html">
+      <map:serializer logger="sitemap.serializer.links" name="links" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.serialization.LinkSerializer"/>
+      <map:serializer logger="sitemap.serializer.xml" mime-type="text/xml" name="xml" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.serialization.XMLSerializer"/>
+      <map:serializer logger="sitemap.serializer.html" mime-type="text/html" name="html" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.serialization.HTMLSerializer">
+        <doctype-public>-//W3C//DTD HTML 4.01 Transitional//EN</doctype-public>
+        <doctype-system>http://www.w3.org/TR/html4/loose.dtd</doctype-system>
+      </map:serializer>
+    
+  <map:serializer logger="sitemap.serializer.xml" mime-type="text/html" name="xhtml" src="org.apache.cocoon.serialization.XMLSerializer">
+    <omit-xml-declaration>no</omit-xml-declaration>
+    <doctype-public>-//W3C//DTD XHTML 1.0 Transitional//EN</doctype-public>
+    <doctype-system> http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd</doctype-system>
+    <encoding>UTF-8</encoding>
+    <indent>yes</indent>
+  </map:serializer>
+  <!--map:serializer name="fo2pdf" src="org.apache.cocoon.serialization.FOPSerializer" mime-type="application/pdf"/-->
+</map:serializers>
+    <map:readers default="resource">
+      <map:reader logger="sitemap.reader.resource" name="resource" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.reading.ResourceReader"/>
+    
+  <map:reader logger="sitemap.reader.resource" name="expiresDay" pool-grow="4" pool-max="32" pool-min="4" src="org.apache.cocoon.reading.ResourceReader">
+    <parameter name="expires" value="86400000"/>
+  </map:reader>
+</map:readers>
+    <map:matchers default="wildcard">
+      <map:matcher logger="sitemap.matcher.wildcard" name="wildcard" src="org.apache.cocoon.matching.WildcardURIMatcher"/>
+      <map:matcher logger="sitemap.matcher.site" name="site" src="nl.hippo.cocoon.matching.SiteMatcher"/>
+    </map:matchers>
+    <map:selectors default="parameter">
+      <map:selector logger="sitemap.selector.exception" name="exception" src="org.apache.cocoon.selection.ExceptionSelector">
+        <exception class="org.apache.cocoon.ResourceNotFoundException" name="not-found"/>
+        <exception class="java.io.FileNotFoundException" name="not-found"/>
+        <exception class="org.apache.cocoon.components.flow.InvalidContinuationException" name="invalid-continuation"/>
+        <exception class="org.apache.excalibur.source.SourceNotFoundException" name="not-found"/>
+        <exception class="java.lang.Throwable" unroll="true"/>
+      </map:selector>
+      <map:selector logger="sitemap.selector.parameter" name="parameter" src="org.apache.cocoon.selection.ParameterSelector"/>
+    </map:selectors>
+    <map:actions>
+       <map:action logger="sitemap.action.clear-cache" name="clear-cache" src="org.apache.cocoon.acting.ClearCacheAction"/>
+       <map:action logger="sitemap.action.clear-cache" name="clear-eventawaretransientstore" src="nl.hippo.cocoon.acting.ClearEventAwareTransientStoreAction"/>
+    </map:actions>
+    <map:pipes default="caching">
+      <map:pipe logger="sitemap.pipes.caching" name="caching" src="org.apache.cocoon.components.pipeline.impl.CachingProcessingPipeline">
+        <!-- Commented out caching to make error reporting work -->
+        <!--parameter name="outputBufferSize" value="32768"/-->
+      </map:pipe>
+      <map:pipe logger="sitemap.pipes.ecaching" name="ecaching" src="org.apache.cocoon.components.pipeline.impl.CachingProcessingPipeline">
+        <parameter name="cache-role" value="org.apache.cocoon.caching.Cache/EventAware"/>
+        <!-- Commented out caching to make error reporting work -->
+        <!--parameter name="outputBufferSize" value="32768"/-->
+      </map:pipe>
+      
+      <map:pipe logger="sitemap.pipes.ecaching" name="wbdvcaching" src="org.apache.cocoon.components.pipeline.impl.CachingProcessingPipeline">
+        <parameter name="cache-role" value="org.apache.cocoon.caching.Cache/EventAwareRepositoryDoc"/>
+        <!-- Commented out caching to make error reporting work -->
+        <!--parameter name="outputBufferSize" value="32768"/-->
+      </map:pipe>
+      
+      <map:pipe logger="sitemap.pipes.noncaching" name="noncaching" src="org.apache.cocoon.components.pipeline.impl.NonCachingProcessingPipeline">
+        <!-- A 1 MB (1048576 B) buffer for the noncaching pipeline, for pdfs and things? -->
+        <!-- Leaving it at 32KB for now, since it doesn't really matter here -->
+        <parameter name="outputBufferSize" value="32768"/>
+      </map:pipe>
+    </map:pipes>
+  </map:components>
+  
+  <map:pipelines>
+    <map:component-configurations>
+      <global-variables> 
+        <version>2.1.11.5</version>
+      </global-variables>
+    </map:component-configurations>
+    
+
+    <map:pipeline id="system-private" internal-only="true"/>
+    
+    <map:pipeline id="system-public">
+
+      <map:match pattern="system/images/*.gif">
+        <map:read mime-type="images/gif" src="resources/images/{1}.gif"/>
+      </map:match>
+
+      <map:match pattern="system/styles/*.css">
+        <map:read mime-type="text/css" src="resources/styles/{1}.css"/>
+      </map:match>
+
+      <map:match pattern="system/scripts/*.js">
+        <map:read mime-type="text/javascript" src="resources/scripts/{1}.js"/>
+      </map:match>
+
+      <map:match pattern="system/favicon.ico">
+        <map:read mime-type="image/x-icon" src="resources/icons/hippo.ico"/>
+      </map:match>
+
+      <map:match type="site">
+        <map:mount src="{src}" uri-prefix="{uri-prefix}"/>
+      </map:match>
+
+      <map:select id="domains" type="parameter">
+        <map:parameter name="parameter-selector-test" value="{request:serverName}"/>
+      </map:select>
+
+      <map:select id="cli" type="parameter">
+        <map:parameter name="parameter-selector-test" value="{request-param:user-agent}"/>
+      </map:select>
+
+      <!-- welcome page -->
+      <map:match pattern="">
+        <map:generate src="welcome.xml"/>
+        <map:transform src="welcome.xslt">
+          <map:parameter name="contextPath" value="{request:contextPath}"/>
+          <map:parameter name="year" value="{cocoon-properties:/year}"/>
+        </map:transform>      
+        <map:serialize type="html"/>
+      </map:match>
+
+      <map:match pattern="welcome">
+        <map:generate src="welcome.xml"/>
+        <map:transform src="welcome.xslt">
+          <map:parameter name="contextPath" value="{request:contextPath}"/>
+          <map:parameter name="year" value="{cocoon-properties:/year}"/>
+        </map:transform>      
+        <map:serialize type="html"/>
+      </map:match>
+
+      <map:match pattern="status">
+        <map:generate type="status">
+          <map:parameter name="hippo-cocoon" value="{global:version}"/>
+          <map:parameter name="store" value="{request-param:store}"/>
+          <map:parameter name="extended-report" value="{request-param:extended-report}"/>
+          <map:parameter name="clear-stats" value="{request-param:clear-stats}"/>
+          <map:parameter name="analyze-this" value="{request-param:analyze-this}"/>
+        </map:generate>
+        <map:transform src="stylesheets/system/status2html.xslt" type="xslt"/>
+        <map:serialize/>
+      </map:match>
+      
+      <map:match pattern="clearcache">
+         <map:act type="clear-cache">
+           <map:generate type="status">
+             <map:parameter name="hippo-cocoon" value="{global:version}"/>
+           </map:generate>
+           <map:transform src="stylesheets/system/status2html.xslt" type="xslt"/>
+           <map:serialize/>
+        </map:act>
+      </map:match>
+      
+      <map:match pattern="clearcache-repository-doc">
+         <map:act type="clear-cache">
+           <map:parameter name="cache-role" value="org.apache.cocoon.caching.Cache/EventAwareRepositoryDoc"/>
+           <map:generate type="status">
+             <map:parameter name="hippo-cocoon" value="{global:version}"/>
+           </map:generate>
+           <map:transform src="stylesheets/system/status2html.xslt" type="xslt"/>
+           <map:serialize/>
+        </map:act>
+      </map:match>
+      
+      <map:match pattern="clearcache-repository-binary">
+         <map:act type="clear-cache">
+           <map:parameter name="cache-role" value="org.apache.cocoon.caching.Cache/EventAwareRepositoryBinary"/>
+           <map:generate type="status">
+             <map:parameter name="hippo-cocoon" value="{global:version}"/>
+           </map:generate>
+           <map:transform src="stylesheets/system/status2html.xslt" type="xslt"/>
+           <map:serialize/>
+        </map:act>
+      </map:match>
+      
+      <map:match pattern="clear-eventawaretransientstore">
+         <map:act type="clear-eventawaretransientstore">
+           <map:generate type="status">
+             <map:parameter name="hippo-cocoon" value="{global:version}"/>
+           </map:generate>
+           <map:transform src="stylesheets/system/status2html.xslt" type="xslt"/>
+           <map:serialize/>
+        </map:act>
+      </map:match>
+
+    </map:pipeline>
+
+    <map:handle-errors>
+      <map:select type="exception">
+
+        <map:when test="not-found">
+          <map:generate type="notifying"/>
+          <map:transform src="stylesheets/system/error2html.xslt">
+            <map:parameter name="pageTitle" value="Resource not found"/>
+          </map:transform>
+          <map:serialize status-code="404"/>
+        </map:when>
+
+        <map:when test="invalid-continuation">
+          <map:generate src="not-found.xml"/>
+          <map:transform src="welcome.xslt"/>
+          <map:serialize status-code="404"/>
+        </map:when>
+
+        <map:otherwise>
+          <map:generate type="notifying"/>
+          <map:transform src="stylesheets/system/error2html.xslt"/>
+          <map:serialize status-code="500"/>
+        </map:otherwise>
+      </map:select>
+
+    </map:handle-errors>
+  </map:pipelines>
+</map:sitemap>

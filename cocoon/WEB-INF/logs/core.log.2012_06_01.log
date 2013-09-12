@@ -1,0 +1,3 @@
+2012-06-01 15:21:41.869 WARN  core.cocoon                              (Unknown-HostUnknown-URI) Unknown-Thread/SettingsHelper: Property cms.eventaware-store.maxobjects not found.
+2012-06-01 15:21:42.871 ERROR core.jms                                 (Unknown-HostUnknown-URI) Unknown-Thread/JMSConnectionManagerImpl: Connection refused :tcp://localhost:3035/
+2012-06-01 15:21:42.940 WARN  core.jms                                 (Unknown-HostUnknown-URI) Unknown-Thread/AbstractMessageListener: Could not obtain JMS connection 'repository.skeleton'

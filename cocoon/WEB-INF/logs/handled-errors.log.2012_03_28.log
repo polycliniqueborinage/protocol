@@ -1,0 +1,3 @@
+2012-03-28 09:04:53.325 ERROR sitemap.handled-errors                   (192.168.100.123:55555/favicon.ico) main-8/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+2012-03-28 11:29:10.265 ERROR sitemap.handled-errors                   (protocol.polycliniqueborinage.org/favicon.ico) main-5/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+2012-03-28 11:29:13.245 ERROR sitemap.handled-errors                   (protocol.polycliniqueborinage.org/favicon.ico) main-7/ErrorHandlerHelper: No pipeline matched request: favicon.ico

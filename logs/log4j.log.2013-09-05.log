@@ -1,0 +1,3 @@
+2013-09-05 18:08:29,289 WARN  .auxiliary.disk.indexed.IndexedDiskCache Region [binarystore] Reseting cache
+2013-09-05 18:08:29,292 WARN  .auxiliary.disk.indexed.IndexedDiskCache Region [repostore] Reseting cache
+2013-09-05 18:08:29,294 WARN  .auxiliary.disk.indexed.IndexedDiskCache Region [store] Reseting cache

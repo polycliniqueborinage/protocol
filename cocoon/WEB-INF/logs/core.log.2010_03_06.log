@@ -1,0 +1,64 @@
+2010-03-06 08:23:32.714 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ThreadSafeComponentHandler: Error decommissioning component: nl.hippo.forrest.locationmap.LocationMapModule
+java.lang.NullPointerException
+	at nl.hippo.forrest.locationmap.LocationMapModule.dispose(LocationMapModule.java:81)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.avalon.excalibur.component.DefaultComponentFactory.decommission(DefaultComponentFactory.java:356)
+	at org.apache.avalon.excalibur.component.ThreadSafeComponentHandler.dispose(ThreadSafeComponentHandler.java:165)
+	at org.apache.avalon.excalibur.component.ExcaliburComponentSelector.dispose(ExcaliburComponentSelector.java:488)
+	at org.apache.cocoon.components.ExtendedComponentSelector.dispose(ExtendedComponentSelector.java:343)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.avalon.excalibur.component.DefaultComponentFactory.decommission(DefaultComponentFactory.java:356)
+	at org.apache.avalon.excalibur.component.ThreadSafeComponentHandler.dispose(ThreadSafeComponentHandler.java:165)
+	at org.apache.avalon.excalibur.component.ExcaliburComponentManager.dispose(ExcaliburComponentManager.java:623)
+	at org.apache.cocoon.components.CocoonComponentManager.dispose(CocoonComponentManager.java:526)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.cocoon.Cocoon.dispose(Cocoon.java:546)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.cocoon.servlet.CocoonServlet.disposeCocoon(CocoonServlet.java:1554)
+	at org.apache.cocoon.servlet.CocoonServlet.destroy(CocoonServlet.java:518)
+	at org.mortbay.jetty.servlet.ServletHolder.stop(ServletHolder.java:270)
+	at org.mortbay.jetty.servlet.ServletHandler.doStop(ServletHandler.java:469)
+	at org.mortbay.jetty.servlet.WebApplicationHandler.doStop(WebApplicationHandler.java:354)
+	at org.mortbay.util.Container.stop(Container.java:154)
+	at org.mortbay.http.HttpContext.doStop(HttpContext.java:1760)
+	at org.mortbay.jetty.servlet.ServletHttpContext.doStop(ServletHttpContext.java:231)
+	at org.mortbay.jetty.servlet.WebApplicationContext.doStop(WebApplicationContext.java:572)
+	at org.mortbay.util.Container.stop(Container.java:154)
+	at org.mortbay.http.HttpServer.removeContext(HttpServer.java:360)
+	at nl.hippo.http.impl.ExcaliburServer.undeploy(ExcaliburServer.java:98)
+	at nl.hippo.http.impl.ExcaliburDeployer.stop(ExcaliburDeployer.java:112)
+	at org.apache.avalon.framework.container.ContainerUtil.stop(ContainerUtil.java:292)
+	at org.apache.avalon.framework.container.ContainerUtil.shutdown(ContainerUtil.java:66)
+	at org.apache.avalon.fortress.impl.handler.ComponentFactory.dispose(ComponentFactory.java:253)
+	at org.apache.avalon.fortress.impl.factory.NoopObjectFactory.dispose(NoopObjectFactory.java:43)
+	at org.apache.avalon.fortress.impl.handler.AbstractComponentHandler.disposeComponent(AbstractComponentHandler.java:278)
+	at org.apache.avalon.fortress.impl.handler.ThreadSafeComponentHandler.doDispose(ThreadSafeComponentHandler.java:60)
+	at org.apache.avalon.fortress.impl.handler.AbstractComponentHandler.dispose(AbstractComponentHandler.java:294)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.avalon.fortress.impl.handler.LEAwareComponentHandler.dispose(LEAwareComponentHandler.java:124)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.avalon.fortress.impl.AbstractContainer.dispose(AbstractContainer.java:799)
+	at org.apache.avalon.framework.container.ContainerUtil.dispose(ContainerUtil.java:306)
+	at org.apache.avalon.fortress.impl.DefaultContainerManager.disposeContainer(DefaultContainerManager.java:222)
+	at org.apache.avalon.fortress.impl.DefaultContainerManager.dispose(DefaultContainerManager.java:232)
+	at nl.hippo.fortress.Main.stop(Main.java:56)
+	at nl.hippo.fortress.Main$1.run(Main.java:101)
+2010-03-06 08:23:32.719 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.excalibur.store.StoreJanitor]
+2010-03-06 08:23:32.719 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.EventRegistry/repositoryBinary]
+2010-03-06 08:23:32.719 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.avalon.excalibur.logger.LoggerManager]
+2010-03-06 08:23:32.719 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.EventRegistry/Transient]
+2010-03-06 08:23:32.720 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.excalibur.store.Store/EventAware]
+2010-03-06 08:23:32.720 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.avalon.excalibur.monitor.Monitor]
+2010-03-06 08:23:32.720 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.EventRegistry/repositoryDoc]
+2010-03-06 08:23:32.720 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.Cache/EventAwareRepositoryDoc]
+2010-03-06 08:23:32.720 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.thread.RunnableManager]
+2010-03-06 08:23:32.721 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.Cache/EventAwareRepositoryBinary]
+2010-03-06 08:23:32.721 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.excalibur.store.Store]
+2010-03-06 08:23:32.721 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [nl.hippo.cocoon.repository.RepositoryManager]
+2010-03-06 08:23:32.721 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.excalibur.store.Store/RepositoryDoc]
+2010-03-06 08:23:32.722 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.excalibur.store.Store/RepositoryBinary]
+2010-03-06 08:23:32.722 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.EventAwareManager]
+2010-03-06 08:23:32.722 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.EventRegistry]
+2010-03-06 08:23:32.722 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.excalibur.store.Store/TransientStore]
+2010-03-06 08:23:32.722 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.components.jms.JMSConnectionManager]
+2010-03-06 08:23:32.722 WARN  core.manager                             (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.caching.Cache/EventAware]

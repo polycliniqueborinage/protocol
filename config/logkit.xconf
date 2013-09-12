@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<logkit>
+
+  <factories>
+    <factory type="file" class="org.apache.avalon.excalibur.logger.factory.FileTargetFactory"/>
+    <factory type="priority-filter" class="org.apache.avalon.excalibur.logger.factory.PriorityFilterTargetFactory"/>
+  </factories>
+
+  <targets>
+
+    <file id="root">
+      <filename>${context-root}/logs/fortress</filename>
+      <format type="extended">
+        %23.23{time:yyyy-MM-dd' 'HH:mm:ss.SSS} %5.5{priority} %40.40{category} %{message}\n%{throwable}
+      </format>
+      <append>true</append>
+      <rotation type="unique" pattern=".yyyy_MM_dd" suffix=".log">
+          <date>yyyyMMdd</date>
+      </rotation>
+    </file>
+
+    <priority-filter id="error" log-level="ERROR">
+      <file>
+        <filename>${context-root}/logs/error</filename>
+        <format type="extended">
+          %23.23{time:yyyy-MM-dd' 'HH:mm:ss.SSS} %5.5{priority} %40.40{category} %{message}\n%{throwable}
+        </format>
+        <append>true</append>
+        <rotation type="unique" pattern=".yyyy_MM_dd" suffix=".log">
+          <date>yyyyMMdd</date>
+        </rotation>
+      </file>
+    </priority-filter>
+
+  </targets>
+
+  <categories>
+    <category name="" log-level="WARN">
+      <log-target id-ref="root"/>
+      <log-target id-ref="error"/>
+    </category>
+  </categories>
+
+</logkit>
