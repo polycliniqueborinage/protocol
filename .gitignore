@@ -1,0 +1,3 @@
+bin/fortress.pid
+cocoon/WEB-INF/logs/*
+logs/*

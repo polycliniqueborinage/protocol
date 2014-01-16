@@ -1,2 +1,0 @@
-20130308170604361       WARN  sitemap                                  (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.selection.SelectorSelector]
-20130308171438151       WARN  sitemap                                  (Unknown-HostUnknown-URI) Unknown-Thread/ExcaliburComponentManager: disposing of handler for unreleased component. role [org.apache.cocoon.selection.SelectorSelector]
