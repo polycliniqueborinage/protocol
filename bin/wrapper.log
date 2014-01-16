@@ -509,3 +509,8 @@
 2012/09/08 12:43:19 | INFO   | jvm 1    | 	at java.lang.Thread.run(Thread.java:679)
 2012/09/08 12:43:19 | INFO   | jvm 1    | log4j:ERROR Either File or DatePattern options are not set for appender [ROOTFILE].
 2012/09/08 12:43:20 | INFO   | jvm 1    | Fortress started
+2014/01/16 09:27:54 | STATUS | wrapper  | --> Wrapper Started as Daemon
+2014/01/16 09:27:54 | STATUS | wrapper  | Launching a JVM...
+2014/01/16 09:27:55 | INFO   | jvm 1    | Wrapper (Version 3.1.2) http://wrapper.tanukisoftware.org
+2014/01/16 09:27:55 | INFO   | jvm 1    | 
+2014/01/16 09:27:55 | INFO   | jvm 1    | Starting Fortress

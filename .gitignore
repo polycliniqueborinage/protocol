@@ -1,3 +1,4 @@
+bin/wrapper.log
 bin/fortress.pid
 cocoon/WEB-INF/logs/*
 logs/*
